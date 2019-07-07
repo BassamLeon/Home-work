@@ -1,0 +1,54 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Mocha Tests</title>
+    <link href="lib/mocha.css" rel="stylesheet" />
+</head>
+<body>
+
+
+  <!-- 👍 YOUR HTML HERE 👍 -->
+  <img id="inn" src="rest.png" alt="rest" width="200" height="200" onclick="restFunction()">
+  <img id="dagger" src="pickup.png" alt="pickupItem" width="200" height="200" onclick="pickupFunction()">
+  <img id="bag" src="equipweapon.png" alt="equipweapon" width="200" height="200" onclick="equipFunction()">
+  <img id="stats" src="stats.png" alt="displayStats" width="200" height="200" onclick="displayStats()">
+
+  <script type="text/javascript">
+    function restFunction() {
+     rest(hero)
+    }
+  </script>
+  <script type="text/javascript">
+    function pickupFunction() {
+      pickUpItem(hero, weapon)
+    }
+  </script>
+  <script type="text/javascript">
+    function equipFunction() {
+      equipWeapon(hero)
+    }
+  </script>
+
+<script type="text/javascript">
+  function displayStats() {
+      displayStats(hero)
+  }
+</script>
+  
+    
+  <!-- I RECOMMEND YOU LEAVE THE REST UNTOUCHED -->
+  <button onclick="mocha.checkLeaks(); mocha.run();">Run the tests!</button>
+
+  <div id="mocha">
+  <!-- MOCHA TEST FEEDBACK WILL BE RENDERED HERE -->
+  </div>
+
+  <script src="lib/chai.js"></script>
+  <script src="lib/mocha.js"></script>
+  <script src="lib/sinon.js"></script>
+  <script>mocha.setup('bdd')</script>
+  <script src="YOUR_JAVASCRIPT_HERE.js"></script>
+  <script src="lib/game_logic.test.js"></script>
+
+</body>
+</html>
